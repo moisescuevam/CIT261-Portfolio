@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Ch5: Higher Order Functions </title>
+    <link rel="stylesheet" type="text/css" href="Higher-Functions.css">
+</head>
+<header>Week4</header>
+<body >
+    <div class="zero">
+        <h1> Ch5: Higher Order Functions </h1>
+
+        <p class="two">
+                We can do or program in different ways. 
+                JavaScripy give us the opportunity to pas grom uìone function to other. <br>
+                 And we can create function with model computation gaps.
+                 Remember Arrays can provide number of useful higher order methods.<br>
+                 So the filter method return a new array (with the elements that pass from 
+                 the past function). We can transform our <br> array with map. 
+                 (reduce=combine elements. Some=element matches. FindIndex= find first element that match) </p>
+        <h3>Exercise</h3>
+        <h4> Flattening</h4>
+        <p>Use the reduce method in combination with the concat method to “flatten” an array of arrays into a single array <br>
+          that has all the elements of the original arrays.</p>
+        <p class="one">
+            let arrays = [[1, 2, 3], [4, 5], [6]];<br>
+            // Your code here. <br>
+            // → [1, 2, 3, 4, 5, 6] <br>            
+        </p> 
+        <h3>The solution is:</h3>
+        <p class="one"> let arrays = [[1, 2, 3], [4, 5], [6]]; <br>
+            console.log(arrays.reduce((flat, current) => flat.concat(current), []));
+            <br>
+            <br>
+          </p>
+    </div> 
+</body>
+</html>

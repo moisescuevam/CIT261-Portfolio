@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ch6: Secret Life of Object</title>
+    <link rel="stylesheet" type="text/css" href="Object.css">
+</head>
+<header>Week4</header>
+<body >
+    <div class="zero">
+        <h1>Ch6: Secret Life of Object</h1>
+        
+        <p class="two"> <br> <br>
+                <strong>   Polymorphism</strong>  <br>
+                polymorphism is the ability of an object to take on many forms. I think occurs when a <br> parent class reference is used to refer to a child class object. 
+                <br>
+                <strong>Inheritance</strong> <br>
+                Inheritance is a mechanism wherein a new class is derived from an existing class. <br> (acquire the properties and methods of other classes.)
+                Whereas encapsulation and polymorphism <br> can be used to separate pieces of code from each other, reducing the taglines of the overall program, inheritance fundamentally ties classes together, creating more tangle. <br> When inheriting from a class, you usually have to know more about how it works than when simply using it. 
+                
+        </p>
+        <h3>Exercise</h3>
+        <h4> A vector types</h4>
+        <p>  Write a class Vec that represents a vector in two-dimensional space. It takes xand y parameters (numbers), <br> which it should save to properties of the same name.
+                Give the Vec prototype two methods, <br> plus and minus, that take another vector as a parameter and return a new vector that has <br> the sum or difference of the two vectors’ (this and the parameter) x and y values. <br>
+                Add a getter property length to the prototype that computes the length of the <br> vector—that is, the distance of the point (x, y) from the origin (0, 0). <br>
+                </p>
+        <p class="one">
+            l// Your code here. <br>
+
+            console.log(new Vec(1, 2).plus(new Vec(2, 3))); <br>
+            // → Vec{x: 3, y: 5} <br>
+            console.log(new Vec(1, 2).minus(new Vec(2, 3))); <br>
+            // → Vec{x: -1, y: -1} <br>
+            console.log(new Vec(3, 4).length); <br>
+            // → 5 <br>
+            
+            
+        </p> 
+        <h3>The solution is:</h3>
+          <p class="one"> user = {<br>
+            class Vec { <br>
+                constructor(x, y) { <br>
+                  this.x = x; <br>
+                  this.y = y;<br>
+                } <br>
+              
+                plus(other) { <br>
+                  return new Vec(this.x + other.x, this.y + other.y); <br>
+                } <br>
+              
+                minus(other) { <br>
+                  return new Vec(this.x - other.x, this.y - other.y); <br>
+                }br
+              
+                get length() { <br>
+                  return Math.sqrt(this.x * this.x + this.y * this.y); <br>
+                } <br>
+              } <br>
+              
+              console.log(new Vec(1, 2).plus(new Vec(2, 3))); <br>
+              // → Vec{x: 3, y: 5} <br>
+              console.log(new Vec(1, 2).minus(new Vec(2, 3))); <br>
+              // → Vec{x: -1, y: -1} <br>
+              console.log(new Vec(3, 4).length); br+
+              // → <br>
+              <br><br>
+              
+              
+          </p>
+    </div> 
+</body>
+</html>

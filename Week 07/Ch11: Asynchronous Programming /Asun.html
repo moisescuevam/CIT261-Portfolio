@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ch11: Asynchronous Programming  </title>
+    <link rel="stylesheet" type="text/css" href="Asyn.css">
+</head>
+<header>Week7</header>
+<body >
+    <div class="zero">
+        <h1> Ch11: Asynchronous Programming  </h1>
+
+        <p class="two">
+                Asynchronous programming is a better fit for code that must respond to events. Asynchronous programming <br> is a form of parallel programming that allows a unit of work to run separately from the primary application thread. 
+            <strong>Asynchronous bugs</strong> <br>
+            When your program runs synchronously, in a single go, there are no state changes happening except those that <br> the program itself makes. For asynchronous programs this is different—they may have gaps in their execution during which other code can run.
+            </p>    
+            <h3>Exercise</h3>
+        <h4> Tracking the scalpel</h4>
+        <p class="two"> The village crows own an old scalpel that they occasionally use on special missions—say, to cut through screen doors or packaging. To be able to quickly track it down, every time the scalpel is moved to another nest, an entry is added to the storage of both the nest that had it and the nest that took it, under the name "scalpel", with its new location as the value.
+                This means that finding the scalpel is a matter of following the breadcrumb trail of storage entries, until you find a nest where that points at the nest itself.
+                Write an async function locateScalpel that does this, starting at the nest on which it runs. You can use the anyStorage function defined earlier to access storage in arbitrary nests. The scalpel has been going around long enough that you may assume that every nest has a "scalpel" entry in its data storage.
+                Next, write the same function again without using async and await.
+                Do request failures properly show up as rejections of the returned promise in both versions? How?
+                
+        
+        </p>
+        <p class="one">
+                async function locateScalpel(nest) { <br>
+                    // Your code here. <br>
+                  } <br>
+                  
+                  function locateScalpel2(nest) { <br>
+                    // Your code here. <br>
+                  } <br>
+                  
+                  locateScalpel(bigOak).then(console.log); <br>
+                  // → Butcher Shop <br>
+                            
+        </p> 
+        <h3>The solution is:</h3>
+        <p class="one"> async function locateScalpel(nest) {<br>
+                let current = nest.name;<br>
+                for (;;) {<br>
+                  let next = await anyStorage(nest, current, "scalpel");<br>
+                  if (next == current) return current;<br>
+                  current = next;<br>
+                }<br>
+              }<br>
+              
+              function locateScalpel2(nest) {<br>
+                function loop(current) {<br>
+                  return anyStorage(nest, current, "scalpel").then(next => {<br>
+                    if (next == current) return current;<br>
+                    else return loop(next);<br>
+                  });<br>
+                }<br>
+                return loop(nest.name);<br>}<br>
+                locateScalpel(bigOak).then(console.log); <br>
+                // → Butcher's Shop <br>
+                locateScalpel2(bigOak).then(console.log); <br>
+                // → Butcher's Shop <br>
+
+              
+                <br>
+            <br>
+          </p>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modules</title>
+    <link rel="stylesheet" type="text/css" href="modules.css">
+</head>
+<header>Week4</header>
+<body >
+    <div class="zero">
+        <h1>Modules</h1>
+        <p class="two">
+        Modules provide structure to bigger programs by separating the code into pieces with clear <br> interfaces and dependencies.
+
+        The most widely used approach to bolted-on JavaScript modules is <br> called CommonJS modules. Node.js uses it and is the system used by most packages on NPM.
+        </p>
+        <h3>Exercise</h3>
+        <h4>Roads module</h4>
+        <p class="one">
+                // Add dependencies and exports <br>
+
+                const roads = [ <br>
+                  "Alice's House-Bob's House",   "Alice's House-Cabin", <br>
+                  "Alice's House-Post Office",   "Bob's House-Town Hall", <br>
+                  "Daria's House-Ernie's House", "Daria's House-Town Hall", <br>
+                  "Ernie's House-Grete's House", "Grete's House-Farm", <br>
+                  "Grete's House-Shop",          "Marketplace-Farm", <br>
+                  "Marketplace-Post Office",     "Marketplace-Shop",<br>
+                  "Marketplace-Town Hall",       "Shop-Town Hall" <br>
+                ];<br>
+                        
+        </p> 
+        <h3>The solution is:</h3>
+        <p><i class="solution"> 
+          
+                const {buildDesign} = require("./design"); <br>
+
+                const roads = [ <br>
+                  "Alice's House-Bob's House",   "Alice's House-Cabin", <br>
+                  "Alice's House-Post Office",   "Bob's House-Town Hall", <br>
+                  "Daria's House-Ernie's House", "Daria's House-Town Hall",<br>
+                  "Ernie's House-Grete's House", "Grete's House-Farm", <br> 
+                  "Grete's House-Shop",          "Marketplace-Farm",<br>
+                  "Marketplace-Post Office",     "Marketplace-Shop", <br>
+                  "Marketplace-Town Hall",       "Shop-Town Hall" <br>
+                ]; <br>
+                
+                exports.roadDesign = buildDesign(roads.map(r => r.split("-"))); <br> 
+              <br> <br> 
+            </i>
+            </p>
+    </div> 
+</body>
+</html>

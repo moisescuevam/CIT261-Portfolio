@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ch12: Canvas, SVG, and Drag and Drop </title>
+    <link rel="stylesheet" type="text/css" href="Canvas.css">
+</head>
+<header>Week8</header>
+<body >
+    <div class="zero">
+        <h1> Ch12: Canvas, SVG, and Drag and Drop  </h1>
+
+        <p class="two">
+            <strong>Canvas </strong> <br>
+            With HTML5’s Canvas API, we can draw anything we can imagine, all through JavaScript. <br>
+            <strong>Why not set width and height using CSS? </strong> <br>
+          You may be asking yourself, why not set the width and height via CSS? It’s because the width and height attributes determine how large the canvas
+           coordinate system is. If we don't specify width and height, the canvas element will default to a width of 300 and a height of 150. If we set the
+            width and height for a canvas only in CSS, the canvas element will be 300 by 150, and the CSS properties will simply determine how large the box 
+            is that displays the image. <br>
+          <strong>What about 3D?</strong> <br>
+          WebGL is a new API for 3D graphics being managed by the Khronos Group, with
+          a WebGL working group that includes Apple, Mozilla, Google, and Opera. <br>
+          <strong>Example:</strong> <br>
+          Drawing a Rectangle to the Canvas <br>
+          var canvas = document.getElementById("myCanvas"); <br>
+          var context = canvas.getContext("2d"); <br>
+          context.strokeStyle = "red";<br>
+          context.fillStyle = "rgba(0, 0, 255, 0.5)"; <br>
+          context.fillRect(10, 10, 100, 100);<br>
+          context.strokeRect(10, 10, 100, 100); <br>
+          
+          <strong>SVG</strong> <br>
+          Stands for Scalable Vector Graphics, a specific file format that allows you to describe vector graphics using XML. A major selling point of vector
+          graphics in general is that, unlike bitmap images (such as GIF, JPEG, PNG, and TIFF), vector images preserve their quality even as you blow them 
+          up or shrink them down. We can use SVG to do many of the same tasks we can do with canvas, including drawing paths, shapes, text, gradients, and patterns. <br>
+          <strong>Example</strong> <br>
+                 Drawing in SVG <br>
+                 Drawing a circle in SVG is arguably easier than drawing a circle with canvas. Here’s
+                 how we do it: <br>
+                 svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><br>
+                circle cx="50" cy="50" r="25" fill="red"/ <br>
+                <strong>Note</strong> <br>
+                There’s also no access to what’s drawn on the canvas via the DOM. Because of this,
+                canvas is much faster than SVG the Current State of WAI-ARIA The WAI-ARIA specification is still improving, 
+                as is HTML5, so these technologies are yet to provide all the benefits we would like. <br>
+                <strong>Microdata</strong> <br>
+                Microdata is another technology that’s rapidly gaining adoption and support, but, unlike WAI-ARIA, it’s technically part of HTML5. Although still early 
+                in development, it’s worth mentioning the Microdata specification here, because the technology provides a peek into what may be the future of document 
+                readability and semantics. In the spec, Microdata is defined as a mechanism that “allows machine-readable data to be embedded in HTML documents in an 
+                easy-to-write manner, with an unambiguous parsing model.” <br>
+              </p>   
+              
+                <br>
+            <br>
+          </p>
+    </div> 
+</body>
+</html>

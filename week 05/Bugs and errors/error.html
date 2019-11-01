@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>  Ch8: Bugs and Errors</title>
+    <link rel="stylesheet" type="text/css" href="error.css">
+</head>
+<header>Week5</header>
+<body >
+    <div class="zero">
+        <h1> Ch8: Bugs and Errors
+            </h1>
+        
+        <p class="two"> <br> <br>
+                <strong>  Why I need to do the testing? </strong>  <br>
+                If the language is not going to do much to help us find mistakes, we’ll have to find them the hard way: <br> by running the program and seeing whether it does the right thing.
+                Tests usually take the form of little <br> labeled programs that verify some aspect of your code. For example, a set of tests for the <br> (standard, probably already tested by someone else) toUpperCase method might look like this: <br>
+                <p class="one">
+                function test(label, body) { <br>
+                  if (!body()) console.log(`Failed: ${label}`); <br>
+                } <br>
+                
+                test("convert Latin text to uppercase", () => {<br>
+                  return "hello".toUpperCase() == "HELLO";<br>
+                });<br>
+                test("convert Greek text to uppercase", () => { <br>
+                  return "Χαίρετε".toUpperCase() == "ΧΑΊΡΕΤΕ"; <br>
+                }); <br>
+                test("don't convert case-less characters", () => { <br>
+                  return "مرحبا".toUpperCase() == "مرحبا"; <br>
+                }); <br>
+                </p>
+              </p>
+
+                <strong>What is debugging?</strong> <br>
+                <p class="two">
+                Is the process of detecting and removing of existing and potential errors (also called as 'bugs') <br> in a software code that can cause it to behave unexpectedly or crash. To prevent incorrect operation of a software or system, debugging is used to find and resolve bugs or defects.
+                </p> <br>
+                <strong>Different between testing and debugging?</strong> <br>
+                <p class="two">
+                    Testing is a process of finding bugs or errors in a software product that is done manually by tester <br> or can be automated. Debugging is a process of fixing the bugs found in testing phase. Programmer or developer is responsible for debugging and it can't be automated.
+                    We make mistake in our code and it is not bad. It helps use to know new thing and to improve all the time. The most important thing of programming is finding, diagnosing, and fixing bugs.
+                    
+                     </p>
+        
+        <h3>Exercise</h3>
+        <h4> Retry</h4>
+        <p class="two"> Say you have a function primitiveMultiply that in 20 percent of cases multiplies two numbers and in the other <br> 80 percent  of cases raises an exception of type MultiplicatorUnitFailure. Write a function that wraps this clunky <br> function and just keeps trying until a call succeeds, after which it returns the result.
+            Make sure you handle only <br> the exceptions you are trying to handle.
+             </p>
+        <p class="one">
+            class MultiplicatorUnitFailure extends Error {} <br>
+
+function primitiveMultiply(a, b) {<br>
+  if (Math.random() < 0.2) { <br>
+    return a * b;<br>
+  } else { <br>
+    throw new MultiplicatorUnitFailure("Klunk"); <br>
+  } <br>
+} <br>
+
+function reliableMultiply(a, b) { <br>
+  // Your code here. <br>
+} <br>
+
+console.log(reliableMultiply(8, 8)); <br>
+// → 64 <br>
+
+            
+        </p> 
+        <h3>The solution is:</h3>
+          <p class="one"> 
+            class MultiplicatorUnitFailure extends Error {} <br>
+
+            function primitiveMultiply(a, b) { <br>
+              if (Math.random() < 0.2) { <br>
+                return a * b; <br>
+              } else { <br>
+                throw new MultiplicatorUnitFailure("Klunk"); <br>
+              } <br>
+            } <br>
+            
+            function reliableMultiply(a, b) { <br>
+              for (;;) { <br>
+                try { <br>
+                  return primitiveMultiply(a, b); <br>
+                } catch (e) { <br>
+                  if (!(e instanceof MultiplicatorUnitFailure)) <br>
+                    throw e; <br>
+                } <br>
+              } <br>
+            } <br>
+            console.log(reliableMultiply(8, 8)); <br>
+            
+              <br><br>
+              
+              
+          </p>
+    </div> 
+</body>
+</html>

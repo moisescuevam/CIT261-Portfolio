@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-us">
+     <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               
+                <meta name="description" content="Updated information about weather in the city|Information from the most truthful sources">
+                <title>Storn Center Weather Website</title>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+                <link rel="stylesheet" href="styless/large.1.css">
+                <link rel="stylesheet" href="styless/medium.css">
+                <link rel="stylesheet" href="styless/small.css">
+                <link rel="stylesheet" href="styless/SocialMedia.1.css">
+            
+                
+             </head>
+
+ <body>
+        <header>
+            <img class="logo" src="imag/logo+curret/heiter.png" alt="The Weather Logo">
+            <div class="headertext">
+                <h1>Weather Forever</h1>
+                    <div class="moto">Climate is what we expect, weather is what we get.</div>
+                </div>
+                <div class="currentconditions">
+                    <img id="icon" src="imag/logo+curret/sole.png" alt="current conditions weather icon">
+                    <p id="condition">Sunny</p>
+                </div>
+            </header>
+            <nav class="navigation">
+                    <button class="bar" onclick="Menu()">&#9776;</button>
+                <div id="nave" class="">
+                        
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="preston7.html">Preston</a></li>
+                        <li><a href="soda.html">Soda Spring</a></li>
+                        <li><a href="fish.html">Fish Haven</a></li>
+                        <li><a href="stornCenter.html">Storm Center</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                 </div>
+            </nav>
+        <main>
+            <h2>Storm Center</h2>
+            <img class="city" src="imag/Gallery/tempeste.jpg" alt="tempest"><br>
+            <form action="thanks.html" method="get">
+                <div class="cont">
+                <fieldset class="contactInfo">
+                    <legend>Contact Information</legend>
+                    <label class="contInf">Full Name*:<input type="text" name="fullname" placeholder="Full Name"required autofocus></label>
+                    <label class="contInf">Email:<input type="email" name="email" placeholder="user@mail.it"></label>
+                    <label class="contInf">Phone Number*:<input type="tel" name="phoneNumber" placeholder="(041) 3320304958" required></label>
+                    <label class="contInf">Zip Code*: <input type="number" name="zipCode" placeholder="37042" min="0000001" max="9999999" required>
+                </fieldset>
+            </div>
+                <fieldset class="StormInfo">
+                    <legend>Storm Information</legend>
+                    <label class="inf">Storm Date:<input type="date" name="stormdate" placeholder="MM.DD.YYYY"></label>
+                    <label class="inf">Storm Type:<input list="stormtype" name="stormtype"></label>
+                            <datalist id="stormtype">
+                                    <option value="Flash Flood">Flash Flood</option>
+                                    <option value="Hail">Hail</option>
+                                    <option value="Hurricane">Hurricane</option>
+                                    <option value="Thunderstorm">Thunderstorm</option>
+                                    <option value="Tornado">Tornado</option>
+                                </datalist>
+                                <label class="inf" for="rating">Rating (1 to 10):</label>
+                                <div class="ma">
+                                <input  type="range" id="rating" value="5" min="1" max="10" step="1" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)"></div>
+                                <span class="inf" id="ratingvalue">5</span><br>
+                    <label class="inf">Storm Region:<select name="stormPlace"></label>
+                                    <option  selected disabled>Select Region...</option>
+                                    <option value="Verona">Verona</option>
+                                    <option value="Caldiero">Caldiero</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Salinas">Salinas</option>
+                                    <option value="Firenze">Firenze</option>
+                                    <option value="Pisa">Pisa</option>
+                                    <option value="New-York">New York</option>
+                                    <option value="Valley">Valley</option>
+                                    <option value="San-Bonifacio">San Bonifacio</option>
+                                    <option value="Vago">Vago</option>
+                                    <option value="Tregnago">Tregnago</option>
+                                    <option value="Giazza">Giazza</option>
+                                    <option value="Molina">Molina</option>
+                                </select>
+                    <label class="inf">User in-danger Level:</label>
+                                        <input class="danger" type="radio" name="danger" value="Yes"> Yes
+                                        <input class="danger" type="radio" name="danger" value="maybe"> Maybe
+                                        <input class="danger" type="radio" name="danger" value="No"> No
+                </fieldset>
+                <fieldset class="additinfo" >
+                    <legend>Additional information:</legend>
+                    <textarea name="additionalinformation"  max="1000" placeholder="Please type here any relevant information..."></textarea><br>
+                    
+                    <input class="submit" type="submit">
+                </fieldset>
+            </form>
+        </main>
+        <section class="contact">
+            <div>
+                <img class="family" src="imag/logo+curret/family.jpg" alt="family time" width="300"
+                height="200">
+            </div>
+            <div class="info">
+                <p><span>Preston Weather Site</span><br>
+                    30 N 1st E<br>
+                    Preston, ID 83263<br>
+                    &#9742; 999.999.9999<br>
+                    &#9993; theweathersite@tws.com
+                </p>
+            </div>
+            <div>
+                    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89619.6965074261!2d11.111687615793054!3d45.41709228115432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477f433f7b5e3811%3A0xc5be5ef448bb6a0d!2s37042+Caldiero%2C+VR!5e0!3m2!1sen!2sit!4v1541571682402" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+            </div>
+            <div class="Social">
+                    
+                    <a id="facebook" href="https://www.facebook.com" class="fa fa-facebook"></a>
+                    <a id="google" href="https://www.google.com" class="fa fa-google"></a>
+                    <a id="twitter" href="https://www.twitter.com" class="fa fa-twitter"></a>
+                    <a id="youtube" href="https://www.youtube.com" class="fa fa-youtube"></a>
+                    <a id="instagram" href="https://www.instagram.com" class="fa fa-instagram"></a>
+            </div>
+            
+        </section>
+        <footer>
+            <p> &copy;2020 Preston Weather Site | Attributions: <a id="weatherMap" target="_blank" href="https://openweathermap.org/">Open Weather Map</a>  | <a>Moises Emilio Cueva</a> | <span id="date">25 June 2019</span></p>
+        </footer>
+        
+    </div>
+    <script src="js/curr.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/strom.js"></script>
+
+</body>
+
+</html>

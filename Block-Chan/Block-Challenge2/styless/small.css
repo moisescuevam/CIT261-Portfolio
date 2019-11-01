@@ -1,0 +1,106 @@
+@media only screen and (max-width:550px){
+    header {
+        display:flex;
+    }
+    .headertext h1{
+        font-size:28px;
+        text-shadow: 1px 1px black;
+    }
+    .moto{
+        font-size: 15px;
+        text-shadow: 1px 1px black;
+    }
+
+    header img {
+        display:flex;
+        align-self: center;
+        justify-content: center;
+        
+    }
+    .currentconditions{
+        display: none;
+    
+    }
+    .navigation{
+    margin-top: 0px;
+    }
+    li a:hover:not(.active) {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    width: 40vw;
+    }
+
+    .navigation ul li a{
+        display:flex;
+        font-size: 5vw;
+     }
+     .navigation #nave ul {
+         display: inline-block; 
+
+         
+     }
+     nav div.hide {
+         display:none;
+        
+     }
+    .bar {
+        text-align: center;
+        display: block;
+        position: absolute;
+        margin-top: 3vw;
+        background-color: white;
+    }
+    
+    .weathersumary h3 {
+        font-size: 2vw;
+     
+
+    }
+    h2{
+        font-size: 7vw;
+    }
+    .article{
+        margin-top: 10em;
+        padding: 0 4em;;
+        font-size: 60%;
+        flex-flow: column wrap;
+        align-content: space-between;
+
+    }
+    article h4{
+        margin-top: -20vw;
+    }
+    p{
+    font-size: 1vw;
+    }
+    .football{
+        width: 10vw;
+        height: 10vw;
+        padding: 16px;
+        margin-top: -4vw;
+        margin-left: -18px;
+
+    }
+
+    .Mygrid{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 6fr;
+        grid-gap: 2px;
+    }
+    .grid img:hover {
+        box-shadow: none;
+    }
+    .grid figcaption:hover {
+        box-shadow: none;
+    }
+    
+    
+    .row .column{
+        width:30vw;
+        margin-top: 1%;
+        margin-left: 25%;
+    }
+    }

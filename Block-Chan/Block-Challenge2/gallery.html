@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <meta name="description" content="Updated information about weather in the city|Information from the most truthful sources">
+    <title>Gallery Wheather forever</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="styless/larg.css">
+    <link rel="stylesheet" href="styless/medium.css">
+    <link rel="stylesheet" href="styless/small.css">
+    <link rel="stylesheet" href="styless/SocialMedia.css">
+    
+    
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="imag/logo+curret/heiter.png" alt="The Weather Logo">
+        <div class="headertext">
+            <h1>Weather Forever</h1>
+                <div class="moto">Climate is what we expect, weather is what we get.</div>
+            </div>
+            <div class="currentconditions">
+                <img id="icon" src="imag/logo+curret/sole.png" alt="current conditions weather icon">
+                <p>Sunny</p>
+            </div>
+        </header>
+        <nav class="navigation">
+                <button class="bar" onclick="Menu()">&#9776;</button>
+            <div id="nave" class="">
+                    
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="preston7.html">Preston</a></li>
+                    <li><a href="soda.html">Soda Spring</a></li>
+                    <li><a href="fish.html">Fish Haven</a></li>
+                    <li><a href="stornCenter.html">Storm Center</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+             </div>
+        </nav>
+<h2 id="gridTittle">Gallery</h2>
+<div>
+
+<div class="row">
+  <div class="column">
+    <img src="imag/Gallery/foggy.jpg" style="width:100%;max-width:400px;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="foggy day">
+    <h4 class="name">Foggy day</h4>
+</div>
+  <div class="column">
+    <img src="imag/Gallery/cloudy.jpg" style="width:100%;max-width:400px" onclick="openModal();currentSlide(2)" class="hover-shadow cursor" alt="cloudy day">
+    <h4 class="name">Cloudy day</h4>  
+</div>
+  <div class="column">
+    <img src="imag/Gallery/tempeste.jpg" style="width:100%;max-width:400px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"  alt="Storn">
+    <h4 class="name">Storn</h4>  
+</div>
+  <div class="column">
+    <img src="imag/Gallery/Hurricane.jpg" style="width:100%;max-width:400px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor" alt="Hurricane">
+    <h4 class="name">Hurricane</h4>
+</div>
+  <div class="column">
+      <img src="imag/Gallery/windy.jpg" style="width:100%;max-width:400px" onclick="openModal();currentSlide(5)" class="hover-shadow cursor" alt="windy day">
+      <h4 class="name">Windy day</h4>
+  </div>
+    <div class="column">
+      <img src="imag/Gallery/superSunnyDay.jpg" style="width:100%;max-width:400px" onclick="openModal();currentSlide(6)" class="hover-shadow cursor" alt="Sunny Day">
+      <h4 class="name">Sunny day</h4>
+    </div>
+</div>
+
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="imag/Gallery/foggy.jpg"  alt="foggy day">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="imag/Gallery/cloudy.jpg"  alt="cloudy day">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="imag/Gallery/tempeste.jpg"  alt="Storn">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="imag/Gallery/Hurricane.jpg"  alt="Hurricane">
+    </div>
+    
+    <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="imag/Gallery/windy.jpg"  alt="windy day">
+    </div>
+
+    <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="imag/Gallery/superSunnyDay.jpg" alt="Sunny Day">
+     </div>
+     
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="imag/Gallery/foggy.jpg" onclick="currentSlide(1)" alt="Foggy day">
+      <figcaption>Foggy day</figcaption>
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="imag/Gallery/cloudy.jpg"  onclick="currentSlide(2)" alt="Cloudy day">
+      <figcaption>Cloudy day</figcaption>
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="imag/Gallery/tempeste.jpg"  onclick="currentSlide(3)" alt="Storn">
+      <figcaption>Storn</figcaption>
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="imag/Gallery/Hurricane.jpg"  onclick="currentSlide(4)" alt="Hurricane">           
+      <figcaption>hurricane</figcaption>
+    </div>
+    <div class="column">
+     <img class="demo cursor" src="imag/Gallery/windy.jpg"   onclick="currentSlide(5)" alt="windy day">
+    <figcaption> Windy day</figcaption> 
+    </div>
+  <div class="column">
+        <img class="demo cursor" src="imag/Gallery/superSunnyDay.jpg"   onclick="currentSlide(6)" alt="super sunny day">
+       <figcaption> Sunny day</figcaption> 
+   </div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+               
+    <section class="contact">
+            <div>
+                <img class="family" src="imag/logo+curret/family.jpg" alt="family time" width="300"
+                height="200">
+            </div>
+            <div class="info">
+                <p><span><Strong>Weather Forever</Strong></span><br>
+                    30 N 1st E<br>
+                    Preston, ID 83263<br>
+                    &#9742; 348-8383 9299<br>
+                    &#9993; Weather-Forever@mymoi.ch
+                </p>
+            </div>
+            <div>
+                    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89619.6965074261!2d11.111687615793054!3d45.41709228115432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477f433f7b5e3811%3A0xc5be5ef448bb6a0d!2s37042+Caldiero%2C+VR!5e0!3m2!1sen!2sit!4v1541571682402" width="300vw" height="200vw" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+            </div>
+            <div class="Social">
+                    
+                <a id="facebook" href="https://www.facebook.com" class="fa fa-facebook"></a>
+                <a id="google" href="https://www.google.com" class="fa fa-google"></a>
+                <a id="twitter" href="https://www.twitter.com" class="fa fa-twitter"></a>
+                <a id="youtube" href="https://www.youtube.com" class="fa fa-youtube"></a>
+                <a id="instagram" href="https://www.instagram.com" class="fa fa-instagram"></a>
+
+            </div>
+        </section>
+<footer>
+    <p> &copy;2020 Preston Weather Site | Attributions: <a id="weatherMap" target="_blank" href="https://openweathermap.org/">Open Weather Map</a>Moises Emilio Cueva | <span id="date">25 June 2019</span></p>
+</footer>
+    <script src="js/menu.js"></script>
+    <script src="js/curr.js"></script>
+    <script src="js/img-open.js"></script>
+</body>
+</html>

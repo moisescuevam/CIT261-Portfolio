@@ -1,0 +1,40 @@
+body{
+    background-image: url("back.jpg");
+    background-size: 100%;
+    
+}
+header{
+    text-align: center;
+    margin: 0vw 0vw 0vw 0vw;
+    color:aqua;
+    text-shadow: 4px 4px 0 blue;
+    font-size: 10vw;
+    margin-top: 5vw;
+  
+  
+  }
+
+.solution{
+    color: red;
+    font-family:courier;
+    text-align: left;
+    margin: 0vw 0vw 0vw 24vw;
+}
+.zero{
+    border-style: inset;
+    border: 0.4vw solid rgb(38, 41, 219);
+    margin: 5vw 5vw 2vw ;
+    background-color: lightblue;
+    text-align: center;
+    border-radius: 30%;
+}
+p.two{
+    text-align: left;
+    color: green;
+    margin: 0vw 0vw 0vw 18vw;
+}
+p.one{
+    text-align: left;
+    color: blue;
+    margin: 0vw 0vw 0vw 18vw;
+}

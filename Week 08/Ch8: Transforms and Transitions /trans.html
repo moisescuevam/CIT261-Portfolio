@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ch8: Transforms and Transitions </title>
+    <link rel="stylesheet" type="text/css" href="trans.css">
+</head>
+<header>Week8</header>
+<body >
+    <div class="zero">
+        <h1> Ch8: Transforms and Transitions  </h1>
+
+        <p class="two">
+          <strong>Transforms </strong> <br>
+          The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page. While some of these effects were possible using previously existing CSS features. <br>
+          <strong>Translation</strong> <br>
+          Translation functions allow you to move elements left, right, up, or down.
+          transform: translate(45px, -45px);
+
+            <strong>Keyframes</strong> <br>
+            To animate an element in CSS, you first create a named animation, then attach it
+            to an element in that element’s property declaration block. Animations
+
+            </p>    
+            <h3>Exercise</h3>
+        <h4> Transition of the train</h4>
+        <p>Click to the train to see the result.</p>
+        <img id="train" src="https://js.cx/clipart/train.gif">
+
+
+  <script>
+    train.onclick = function() {
+      let start = Date.now();
+
+      let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+
+        train.style.left = timePassed / 5 + 'px';
+
+        if (timePassed > 1000) clearInterval(timer);
+
+      }, 10);
+    }
+  </script>
+ 
+        
+        <h3>The solution is:</h3>
+        <img class="code" src="train.png" alt="">
+                <br>
+            <br>
+          </p>
+    </div> 
+</body>
+</html>

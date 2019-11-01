@@ -1,0 +1,55 @@
+body{
+    background-image: url("back.jpg");
+    background-size: 100%;
+    
+}
+header{
+  text-align: center;
+  margin: 0vw 0vw 0vw 0vw;
+  color:aqua;
+  text-shadow: 4px 4px 0 blue;
+  font-size: 10vw;
+  margin-top: 5vw;
+
+
+}
+
+#train {
+    position: relative;
+    cursor: pointer;
+
+}
+.solution{
+    color: red;
+    font-family:courier;
+
+}
+.zero{
+    border-style: inset;
+    border: 0.4vw solid rgb(38, 41, 219);
+    margin: 5vw 20vw 20vw ;
+    background-color: lightblue;
+    text-align: center;
+    border-radius:  5vw;
+}
+p.one{
+    text-align: left;
+    color: blue;
+    margin: 0vw 0vw 0vw 20vw;
+}
+p.two{
+    text-align: left;
+    
+    margin: 3vw 3vw 0vw 5vw;
+}
+h4 {
+    text-align: center;
+    color:red;
+    
+}
+.code{
+   border-radius: 10%;
+   width: 30vw;
+   height: 35vw;
+    
+}

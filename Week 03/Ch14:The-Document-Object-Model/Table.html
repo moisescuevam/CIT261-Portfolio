@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ch14: The Document Object Model </title>
+    <link rel="stylesheet" type="text/css" href="table.css">
+</head>
+<header>Week3</header>
+<body >
+    <div class="zero">
+        <h1>Ch14: The Document Object Model </h1>
+        <p>
+            JavaScript programs may inspect and interfere with the document that the browser <br> displaying through a data structure called the DOM.<br>
+            The DOM is organized like a tree, in which elements are arranged hierarchically according to the structure of the document.<br>
+                </p>
+        <p class="one">Build a table
+
+            An HTML table is built with the following tag structure:<br>
+            <span>&lt;</span>
+            <span>table</span>
+            <span>&gt;</span><br>
+
+            <span>&lt;</span>
+            <span>tr</span>
+            <span>&gt;</span><br>
+
+            <span>&lt;</span>
+            <span>th</span>
+            <span>&gt;</span>
+            name
+            <span>&lt;/</span>
+            <span>th</span>
+            <span>&gt;</span><br>
+            <span>&lt;</span>
+            <span>th</span>
+            <span>&gt;</span>
+            height
+            <span>&lt;/</span>
+            <span>th</span>
+            <span>&gt;</span><br>
+            <span>&lt;</span>
+            <span>th</span>
+            <span>&gt;</span>
+            place
+            <span>&lt;/</span>
+            <span>th</span>
+            <span>&gt;</span><br>
+            <span >&lt;/</span>
+            <span>tr</span>
+            <span>&gt;</span><br>
+            <span>&lt;</span>
+            <span>tr</span>
+            <span>&gt;</span><br>
+            <span>&lt;</span>
+            <span>td</span>
+            <span>&gt;</span>
+            Kilimanjaro
+            <span>&lt;/</span>
+            <span>td</span>
+            <span>&gt;</span><br>
+            <span>&lt;</span>
+            <span>td</span>
+            <span>&gt;</span>
+            5895
+            <span>&lt;/</span>
+            <span>td</span>
+            <span>&gt;</span><br>
+            <span>&lt;</span>
+            <span>td</span>
+            <span>&gt;</span>
+            Tanzania
+            <span>&lt;/</span>
+            <span>td</span>
+            <span>&gt;</span><br>
+            <span>&lt;/</span>
+            <span>tr</span>
+            <span>&gt;</span><br>
+            <span>&lt;/</span>
+            <span>table</span>
+            <span>&gt;</span>
+        </p>
+        <p class="two"><br>
+        <span>MOUNTAINS</span> <span>=</span> [ <br>
+    {<span>name</span>: <span>&quot;Kilimanjaro&quot;</span>, <span>height</span>: <span>5895</span>, <span>place</span>: <span>&quot;Tanzania&quot;</span>}<br>
+    {<span>name</span>: <span>&quot;Everest&quot;</span>, <span>height</span>: <span>8848</span>, <span>place</span>: <span>&quot;Nepal&quot;</span>}<br>
+    {<span>name</span>: <span>&quot;Mount Fuji&quot;</span>, <span>height</span>: <span>3776</span>, <span>place</span>: <span>&quot;Japan&quot;</span>}<br>
+    {<span>name</span>: <span>&quot;Vaalserberg&quot;</span>, <span>height</span>: <span>323</span>, <span>place</span>: <span>&quot;Netherlands&quot;</span>}<br>
+    {<span>name</span>: <span>&quot;Denali&quot;</span>, <span>height</span>: <span>6168</span>, <span>place</span>: <span>&quot;United States&quot;</span>}<br>
+    {<span>name</span>: <span>&quot;Popocatepetl&quot;</span>, <span>height</span>: <span>5465</span>, <span>place</span>: <span>&quot;Mexico&quot;</span>}<br>
+    {<span>name</span>: <span>&quot;Mont Blanc&quot;</span>, <span>height</span>: <span>4808</span>, <span>place</span>: <span>&quot;Italy/France&quot;</span>}<br>
+  ];
+  <br>
+  <span>// Your code here</span><br>
+<span >&lt;/</span><span>script</span><span>&gt;</span></pre>
+</p>
+<h3>The solution is: </h3>
+<p class="solution"><br>
+<span> const MOUNTAINS</span> <span>=</span> [ <br>
+{<span>name</span>: <span>&quot;Kilimanjaro&quot;</span>, <span>height</span>: <span>5895</span>, <span>place</span>: <span>&quot;Tanzania&quot;</span>}<br>
+{<span>name</span>: <span>&quot;Everest&quot;</span>, <span>height</span>: <span>8848</span>, <span>place</span>: <span>&quot;Nepal&quot;</span>}<br>
+{<span>name</span>: <span>&quot;Mount Fuji&quot;</span>, <span>height</span>: <span>3776</span>, <span>place</span>: <span>&quot;Japan&quot;</span>}<br>
+{<span>name</span>: <span>&quot;Vaalserberg&quot;</span>, <span>height</span>: <span>323</span>, <span>place</span>: <span>&quot;Netherlands&quot;</span>}<br>
+{<span>name</span>: <span>&quot;Denali&quot;</span>, <span>height</span>: <span>6168</span>, <span>place</span>: <span>&quot;United States&quot;</span>}<br>
+{<span>name</span>: <span>&quot;Popocatepetl&quot;</span>, <span>height</span>: <span>5465</span>, <span>place</span>: <span>&quot;Mexico&quot;</span>}<br>
+{<span>name</span>: <span>&quot;Mont Blanc&quot;</span>, <span>height</span>: <span>4808</span>, <span>place</span>: <span>&quot;Italy/France&quot;</span>}<br>
+];<br>
+function buildTable(data) {<br>
+  let table = document.createElement("table");<br>
+
+  let fields = Object.keys(data[0]);<br>
+  let headRow = document.createElement("tr");<br>
+  fields.forEach(function(field) {<br>
+    let headCell = document.createElement("th");<br>
+    headCell.textContent = field;<br>
+    headRow.appendChild(headCell);<br>
+  });<br>
+  table.appendChild(headRow);<br>
+  <br>
+  data.forEach(function(object) {<br>
+    let row = document.createElement("tr");<br>
+    fields.forEach(function(field) {<br>
+      let cell = document.createElement("td");<br> 
+      cell.textContent = object[field];<br>
+      if (typeof object[field] == "number") {<br>
+        cell.style.textAlign = "right";<br>
+      }<br>
+      row.appendChild(cell);<br>
+    });<br>
+    table.appendChild(row);<br>
+  });<br>
+
+  return table;<br>
+}<br>
+
+document.querySelector("#mountains")<br>
+  .appendChild(buildTable(MOUNTAINS));<br>
+    </div> 
+</body>
+</html>

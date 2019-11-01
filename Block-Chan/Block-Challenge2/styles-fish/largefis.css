@@ -1,0 +1,468 @@
+body{
+    margin: 15%;
+    margin-top: 0%;
+    font-family: rancho;
+    text-align: center;
+    margin-bottom: -20vw;
+    
+
+}
+.MyGridCont {
+    display: grid;
+   /*grid-template-columns: repeat(5, 10%);*/
+    grid-template-areas:
+        'header header header header header header'
+        'nav nav nav nav nav nav'
+        'main main main main main main'
+        "forecast forecast forecast forecast forecast forecast"
+        "article article article article article article"
+        "contact contact contact contact contact contact"
+        "social social social social social social"
+        "footer footer footer footer footer footer" ;
+}
+
+
+.aitem { grid-area: header; }
+.eitem { grid-area: nav; }
+.iitem { grid-area: main; }
+.oitem { grid-area: forecast; }
+.uitem { grid-area: article; }
+.aeitem { grid-area: contact; }
+.eeitem { grid-area: social}
+.ieitem { grid-area: footer; }
+
+/*------------------------HEADER--------------------*/
+
+.aitem{
+    justify-content: center;
+    background-color:rgb(42, 149, 175);
+    text-align: center;
+
+}.logo{
+    float: left;
+    vertical-align: middle;
+    height: auto;
+    margin-left: 2vw;
+    max-width: 13vw;
+    margin-top: 1vw;
+}
+
+
+.headertext h1{
+    text-align: center;
+    font-size: 6vw;
+    color :rgb(149, 233, 198);
+    text-shadow: 2px 2px black;
+    font-family: rancho;
+    margin-right: 10vw;
+    margin-top: 3%;
+    
+}
+
+.moto{
+    padding: 1vw;
+    margin-top: -8%;
+    font-size: 2.8vw;
+    color:rgb(240, 133, 234);
+    text-shadow: 1px 1px black;
+    font-style: italic;
+    margin-right: 10vw;
+
+}
+
+.currentconditions{ 
+    float: right;
+    vertical-align: middle;
+    color:  rgb(0, 195, 255);
+    background-color: rgb(42, 148, 175);
+    border: 0.3vw solid rgba(238, 241, 62, 0.781);
+    font-size: 2vw;
+    border-radius: 15px;
+    font-family: rancho;
+    height: 9vw;
+    max-width: 15vw;
+   padding: 0.5vw;
+    margin-top: -15%;
+    margin-right: 3vw;
+
+    
+}
+#icon{
+    width: 7vw;
+   
+}
+
+#condition{
+   
+    padding: 0vw;
+    margin-top: -0.2vw;
+    
+}
+
+.currentconditions img {
+    max-width: 60vw;
+
+}
+
+/*--------------------NAV------------------------*/
+.eitem{
+    
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color:rgb(78, 184, 211);
+    font-family: rancho;
+    font-size: 2vw;
+    margin-top: -25px;
+    height: 5vw;
+}
+.bar {
+    display: none;
+}
+#nave{
+    display: grid;
+    grid-template-areas:
+
+    "home preston soda fish storm gallery";
+
+}
+.navigation #nave ul {
+    display: flex;  
+   justify-content: center;
+   
+}
+
+#nave > li {
+    justify-self: center;
+}
+li > a {
+    color:aquamarine; 
+    display: block;
+
+}
+ul li{
+    list-style-type: none;
+}
+#nave{
+    list-style-type: none;
+
+}
+
+a:hover{
+    background-color: rgba(88, 84, 84, 0.795);
+    width: 8.7vw;
+    border-radius: 5vw;
+}
+li {
+    padding-right: 4vw;
+    
+}
+
+
+/*------------------------IMG----------------------------*/
+h2 {
+    text-align: center;
+    color: rgb(45, 223, 193);
+    text-shadow: 2px 1px rgba(224, 28, 28, 0.493);
+    font-size: 4vw;
+    margin-top: -0.1vw;
+}
+
+.iitem{
+   /*background-color: greenyellow;*/
+    text-align: center;
+    font-size: 20px;
+
+}
+
+#Preston5 img{
+    text-align: center;
+    border-radius: 1vw;
+    margin-top: -3.5vw;
+    width: 80%;
+}
+
+.weathersumary{
+    position: relative;
+    margin-left: 8vw;
+    height: 15%;
+    width: 18%;
+    background-color: rgba(78, 184, 211, 0.432);
+    border: 0.2vw solid rgb(238, 241, 62);
+    border-radius: 1vw;
+    margin-top: -25vw;
+    
+}
+
+.weatherdetails p{ 
+    display:inline-block;
+    text-shadow: 1px 1px black;
+    margin-top: -20px;
+    color:white;
+    font-size: 1.25vw;
+    text-align: left;
+
+}
+.weathersumary h3{
+    text-decoration:underline;
+    color: aquamarine;
+    text-shadow: 1px 1px black;
+}
+.label {
+    color:white;
+    text-align:left;
+}
+.value {
+    float:right;
+    color: rgb(223, 223, 43);
+    margin-top: -35px;
+    text-align:right;
+}
+/*-----------------FORECAST-------------------------*/
+.oitem{
+  /* background-color: paleturquoise;*/
+    text-align: center;
+}
+
+.forecast{
+    text-align: center;
+    background-color:rgb(78, 184, 211);
+    font-size: 2.5vw;
+    color: rgb(240, 133, 234);
+    text-shadow: 2px 1px black;
+    border-radius: 1vw;
+    position: relative;
+    border:1px solid aquamarine;
+    margin-top: 12vw;
+    text-align: center;
+    margin-bottom:-0vw; 
+    margin-left: 5vw;
+    width: 58vw;
+
+}
+
+
+td {
+
+    color: white;
+    text-align: center;
+
+}
+.forecast h3{
+    position: relative;
+    font-size: 3vw;
+    color: white;
+    margin-top:10px;
+    text-align: left;
+}
+th, td{
+    font-size: 1.8vw; 
+    border: 1px solid  rgba(238, 241, 62, 0.781);  
+}
+table, th, td {
+    padding: 0.1vw;
+    margin: 0 0 0 26vw;
+    border-radius: 10px;
+}
+table{
+    width: 50%;
+    margin-top: -7.2vw;
+}
+p span{
+    color:  rgb(238, 241, 62);
+
+}
+
+
+/*------------------ART----------------------*/
+
+article{
+    padding: 1vw;
+    text-align:justify;
+    background-color: rgb(78, 184, 211);
+    margin-top: 1vw;
+    border-radius: 1vw;
+    display: flex;
+    padding: 0;
+    height: 30vw;
+    border:1px solid aquamarine;
+}
+
+article > img {
+    width: 25%;
+    float: right;
+    margin-top: -40px;
+    right: 150px;
+    border: 3px solid #3a4048;
+    position: absolute;
+  
+}
+
+article h4{
+    font-size: 2.5vw;
+    color: rgba(42, 248, 197, 0.911);
+    text-shadow: 1px 1px rgb(203, 216, 26);
+    margin-top: 1vw;
+    margin-left: 3vw;
+}
+article p{
+    font-size: 2vw;
+    margin-top: -2vw;
+    margin-left: 3vw;
+    
+}
+
+#listss{
+    text-align: center;
+    color: aquamarine;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    
+    
+    
+}
+.sport{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border: 2pt solid black;
+    background-color: rgb(65, 175, 139);
+    padding: 0.5rem;
+    border-radius: 20px;
+    width: 40%;
+    height: 20%;
+    margin-top: 10vw;
+    margin-right: 0.6vw;
+}
+.football{
+    padding: 1vw;
+    width: 5vw;
+    height:5vw;
+}
+
+/*-------------------contact--------------------------*/
+.uitem{
+
+  
+box-decoration-break: none;
+}
+
+.contact{
+    height: auto;
+    
+    background-color: rgb(78, 184, 211);
+    padding: 1.5vw;
+    position: relative;
+    margin-top: 2em;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border:1px solid aquamarine;
+}
+.family{
+    margin-top: 1.5vw;
+    margin-left: 1vw;
+    border-radius: 15px;
+    float: left;
+    width: 22vw;
+}
+.info{
+    font-size: 80%;
+    margin-right: 20vw;
+    text-align: center;
+    margin-top: 3vw;
+}
+
+iframe{
+    width: 22vw;
+    height: 14vw;
+    border-radius: 1vw;
+    float: right;
+    margin-top: -10vw;
+}
+/*---------------------Social----------------------*/
+
+.eeitem{
+    position: relative;
+    height: 10%;
+    margin-right: 0vw;
+    margin-top: 6vw;
+    padding: 5vw;
+  
+}
+.fa {
+    display: inline;
+    padding: 1.5vw;
+    font-size: 1vw;
+    
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5vw 0.2vw;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+      color: rgba(0, 255, 255, 0.233);
+  }
+  
+  #facebook {
+    background: #3B5998;
+  }
+  
+  #twitter {
+    background: #55ACEE;
+  }
+  
+  #google {
+    background: #dd3a25;
+  }
+  
+  #youtube {
+    background: rgb(204,24,30);
+  }
+  #instagram{
+      background: #d6249f;
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+
+  }
+
+#instagram,  #youtube, #google, #twitter, #facebook {
+ 
+  text-align: center;
+  color: #fff;
+  vertical-align: middle;
+  box-shadow: 0vw 0.4vw 1vw rgba(0,0,0,.25);
+  border:1px solid rgba(255, 255, 255, 0.432);
+}
+  
+  
+
+/*--------------------FOOTE--------------------------*/
+.ieitem{
+    /*background-color: greenyellow;*/
+     text-align: center;
+     font-size: 20px;
+ 
+ }
+ footer {
+    background-color: rgb(42, 149, 175);
+    color: white;
+    font-size: 1.1vw;
+    padding: 0.5em;
+    display:flex;
+    justify-content: center;
+}
+
+
+.info span{
+    font-weight: bold;
+    color: black;
+    font-size: 2vw;
+}
+.info p{
+    font-size: 1.1vw;
+}
+
+
+#date {
+    color:white;
+}

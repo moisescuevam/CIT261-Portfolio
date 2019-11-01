@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object Methods: this</title>
+    <link rel="stylesheet" type="text/css" href="this.css">
+</head>
+<header>Week3</header>
+<body >
+    <div class="zero">
+        <h1>Object Methods: this</h1>
+        <h3> Following are the best way to use this:</h3>
+        <p class="two">
+            •	We can use this to specifically denote that the instance variable is used instead of static or local variable.<br>
+            •	We can use this to refer the constructors.<br>
+            •	We can use this as a parameter<br>
+            •	We can use this to return the current instance <br>
+            •	We can use this in arrow function. If we use this in arrow function, we take this from outside.<br>
+        </p>
+        <h3>Exercise</h3>
+        <h4> What is the result of this code?</h4>
+        <p class="one">
+            let user = {<br>
+              name: "John",<br>
+              go: function() { alert(this.name) }<br>
+            }<br>
+            (user.go)()  <br>          
+        </p> 
+        <h3>The solution is:</h3>
+        <p><i class="solution"> The (user.go) do nothing because we need to close the element before. <br>
+          And we will have a error. If we do in this way:</i> </p>
+          <p class="one"> user = {<br>
+              name: "John",<br>
+              go: function() { alert(this.name) }<br>
+            };<br>
+            
+            (user.go)()<br>
+             We will have the answer “John”.
+          </p>
+    </div> 
+</body>
+</html>

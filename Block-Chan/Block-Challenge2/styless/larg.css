@@ -1,0 +1,486 @@
+
+body{ margin: 15%;
+    margin-top: 0%;
+    font-family: rancho;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: -30vw;
+}
+header {
+    display: flex;
+    justify-content: center;
+    background-color:rgb(42, 149, 175);
+    text-align: center;
+   
+   
+}
+.headertext h1{
+    font-size: 6vw;
+    color :rgb(149, 233, 198);
+    text-shadow: 2px 2px black;
+    font-family: rancho;
+}
+.logo{
+    vertical-align: middle;
+    width: 15vw;
+    height: 15vw;
+    margin-left: -1vw;
+}
+.moto{
+    padding: 1vw;
+    margin-top: -10%;
+    font-size: 2.8vw;
+    color:rgb(240, 133, 234);
+    text-shadow: 1px 1px black;
+    font-style: italic;
+}
+
+.currentconditions{ 
+    display: inline-block;
+    vertical-align: middle;
+    color:  rgb(0, 195, 255);
+    background-color: rgb(42, 148, 175);
+    border: 0.3vw solid rgba(238, 241, 62, 0.781);
+    font-size: 1vw;
+    border-radius: 15px;
+    font-family: rancho;
+    height: 10vw;
+    margin-top: 2vw;
+    
+    padding: 1vw;
+}
+#icon{
+    width: 7vw;
+   
+}
+
+#condition{
+   
+    padding: 0.5vw;
+    
+}
+.navigation {
+    margin-top: -3%;
+    background-color:rgb(78, 184, 211);
+    font-size: 2.5vw;
+    font-family: rancho;
+    font-size: 2vw;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+}
+.navigation #nave ul {
+    display: flex;  
+   justify-content: center;
+   
+}
+a:hover{
+    background-color: black;
+    width: 8.7vw;
+    border-radius: 5vw;
+}
+.bar {
+    display: none;
+}
+
+ul li{
+    list-style-type: none;
+}
+li {
+    padding-right: 4vw;
+    
+}
+li > a {
+    color:aquamarine; 
+    display: block;
+    padding: 0.2vw;
+}
+.MyGrid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr;
+    text-align: center;
+    grid-gap: 10px;
+}
+.MyGrid h2{
+    margin-top: 1vw;
+}
+#CityOfPreston, #CityOfGreenville, #CityOfPlacerton {
+    border-radius: 1.5vw;
+    margin-left: 5px;
+    background-color: rgb(78, 184, 211);
+    border: 1px solid aquamarine;
+    width:95%;
+    height: auto;
+    padding: 10px;
+    
+}
+.Towns img {
+    margin-top: -2vw;
+    border-radius: 1vw;
+    border: 2px solid white;
+    width:87%;
+}
+#weatherMap {
+    text-decoration: none;
+}
+
+.label {
+    float:left;
+}
+.value {
+    float:right;
+    color: rgb(223, 223, 43);
+}
+#Preston5 img{
+    text-align: center;
+    border-radius: 1vw;
+    margin-top: -3.5vw;
+    width: 80%;
+}
+
+.weathersumary{
+    position: relative;
+    margin-left: 8vw;
+    height: 12%;
+    width: 16%;
+    background-color: rgba(78, 184, 211, 0.432);
+    border: 0.2vw solid rgb(238, 241, 62);
+    border-radius: 1vw;
+    margin-top: -25vw;
+    
+}
+
+.weathersumary h3{
+    text-decoration:underline;
+    color: aquamarine;
+    text-shadow: 1px 1px black;
+}
+.forecast {
+    
+    background-color:rgb(78, 184, 211);
+    font-size: 2.5vw;
+    color: rgb(240, 133, 234);
+    text-shadow: 2px 1px black;
+    border-radius: 1vw;
+    margin-top: 13vw;
+    text-align: center;
+    border:1px solid aquamarine;
+
+}
+h2{
+    color: rgb(45, 223, 193);
+    text-shadow: 2px 1px rgba(224, 28, 28, 0.493);
+    font-size: 4vw;
+    margin-top: -1vw;
+    
+}
+.forecast h3{
+    display: flex;
+    font-size: 3vw;
+    color: white;
+    margin-left: 1vw;
+    margin-top:10px;
+}
+th, td{
+    font-size: 1.8vw; 
+    border: 1px solid  rgba(238, 241, 62, 0.781);  
+}
+table, th, td {
+    
+   
+    padding: 0.5vw;
+    margin: 0 0 0 28vw;
+    border-radius: 10px;
+}
+table{
+    width: 60%;
+    margin-top: -7.2vw;
+}
+td{
+    color: white;
+}
+.weatherdetails p{ 
+    display:inline-block;
+    text-shadow: 1px 1px black;
+    margin-top: -20px;
+    color:white;
+    font-size: 1.25vw;
+    text-align: left;
+
+}
+p span{
+    color:  rgb(238, 241, 62);
+
+}
+
+article{
+    display: flex;
+    background-color: rgb(78, 184, 211);
+    margin-top: 1vw;
+    border-radius: 1vw;
+    padding: 0;
+    height: 30vw;
+    border:1px solid aquamarine;
+}
+article h4{
+    font-size: 2.5vw;
+    color: rgba(42, 248, 197, 0.911);
+    text-shadow: 1px 1px rgb(203, 216, 26);
+    margin-top: 0vw;
+    padding: 0;
+}
+article p{
+    font-size: 2vw;
+    margin-top: -1vw;
+    padding: 0;
+    
+}
+
+#listss{
+    text-align: center;
+    color: aquamarine;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    
+    
+    
+}
+.sport{
+    display:flex;
+    border: 2pt solid black;
+    background-color: rgb(65, 175, 139);
+    padding: 0.5rem;
+    border-radius: 20px;
+    width: 40%;
+    height: 20%;
+    margin-top: 10vw;
+    margin-right: 0.6vw;
+}
+.football{
+    padding: 1rem;
+    width: 6vw;
+    height:6vw;
+  
+}
+
+
+.contact{
+    height: auto;
+    vertical-align: middle;
+    background-color: rgb(78, 184, 211);
+    padding: 1.5em;
+    position: relative;
+    margin-top: 2em;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border:1px solid aquamarine;
+}
+.family{
+    margin-top: 1.5vw;
+    border-radius: 15px;
+}
+.info{
+    font-size: 80%;
+    align-self: center;
+}
+iframe{
+    border-radius: 15px;
+}
+footer {
+    background-color: rgb(42, 149, 175);
+    color: white;
+    font-size: 1.1vw;
+    padding: 0.5em;
+    display:flex;
+    justify-content: center;
+}
+
+
+.info span{
+    font-weight: bold;
+    color: black;
+    font-size: 2vw;
+}
+.info p{
+    font-size: 1.1vw;
+}
+
+
+#date {
+    color:white;
+}
+/*==============Gallery=================*/
+* {
+    box-sizing: border-box;
+  }
+  #gridTittle{
+    text-align: center;
+    
+}
+.row{
+
+    background-color: rgb(78, 184, 211);
+    display:grid;
+    border-radius: 2vw;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-gap: 5px;
+    border:1px solid aquamarine;
+  }
+  .name{
+      color: rgb(33, 54, 172);
+      text-shadow: 1px 1px rgb(234, 248, 35);
+      font-size: 2vw;
+  }
+  .row img {
+    border:0.2vw solid   rgba(238, 241, 62, 0.822);
+    margin-top: 2vw;
+    margin-left: 1.4vw;
+    border-radius: 1vw;
+    height: 15vw;
+
+  }
+  .row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 20vw;
+  }
+  .column img {
+      width: 20vw;
+      height: 10vw;
+      grid-template-columns: 4fr 4fr 4fr;
+  }
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color:white;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    max-width: 1000px;
+  
+  }
+  
+  /* The Close Button */
+  .close {
+    color:red;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 5vw;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color:white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+.mySlides img{
+    width:100%;
+    max-width:800px;
+    height:45vw;
+
+}
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 3vw;
+    margin-top: -50px;
+    color: aqua;
+    font-weight: bold;
+    font-size: 5vw;
+    transition: 0.5s ease;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+   /* Position the "prev button" to the left */
+   .prev{
+       left: 0;
+       border-radius: 3px 0 0 3px;
+   }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: greenyellow;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+ 
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+
+  }
+  
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}

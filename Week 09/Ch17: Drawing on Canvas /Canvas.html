@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ch17: Drawing on Canvas  </title>
+    <link rel="stylesheet" type="text/css" href="Canvas.css">
+</head>
+<header>Week9</header>
+<body >
+    <div class="zero">
+        <h1> Ch17: Drawing on Canvas </h1>
+
+        <p class="two">
+            SVG has support now for the native browser, plugin, and mobile browsers as well. Canvas is an HTML element, which is used to draw graphics on the web page. It is referred to as bitmap with an immediate mode graphics application programming interface
+        </p>
+        <p class="two">
+            Discuss WebGL—we’ll stick to two dimensions. But if you are interested in three-dimensional graphics, I do encourage you to look into WebGL. <br>
+            The <strong> fillRect</strong> method fills a rectangle. It takes first the x- and y-coordinates of the rectangle’s top-left corner, then its width, and then its height. A similar method, strokeRect, draws the outline of a rectangle. <br>
+            The <strong>fillStyle</strong> property controls the way shapes are filled. It can be set to a string that specifies a color, using the color notation used by CSS. <br>
+            The <strong>strokeStyle</strong> property works similarly but determines the color used for a stroked line. The width of that line is determined by the lineWidth property, which may contain any positive number. <br>        
+        </p>
+        <p><strong>Example</strong> <br>
+            <img src="canvas.png" alt="Canvas Example">
+            <p><strong>Paths</strong> <br>
+                Calling beginPath starts a new path. A number of other methods add lines and curves to the current path. <br>
+                <img src="paths.png" alt="Paths example">
+            </p>
+            <p class=""><strong>Exercise</strong> <br>
+                Shapes <br>
+                <p class="three">
+                Write a program that draws the following shapes on a canvas: <br>
+                1.	A trapezoid (a rectangle that is wider on one side) <br>
+                2.	A red diamond (a rectangle rotated 45 degrees or ¼π radians) <br>
+                3.	A zigzagging line <br>
+                4.	A spiral made up of 100 straight line segments <br>
+                5.	A yellow star <br>
+             </p>
+                <img src="exercise-canvas.png" alt="exercise"> <br>
+                <p class="two">
+                When drawing the last two, you may want to refer to the explanation of Math.cos and Math.sin in Chapter 14, which describes how to get coordinates on a circle using these functions.I recommend creating a function for each shape. Pass the position, and optionally other properties such as the size or the number of points, as parameters. The alternative, which is to hard-code numbers all over your code, tends to make the code needlessly hard to read and modify. <br>
+                </p>
+                <img src="selve.png" alt="picture of the code exercise">
+                
+                </p>
+
+                <p class="Solution"><strong>Solution</strong> <br>
+                    <img src="solution.png" alt="solution of the exercise">
+                <br>
+            <br>
+          </p>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,222 @@
+body{ margin: 15%;
+    margin-top: 0%;
+    font-family: rancho;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: -30vw;
+}
+header {
+    display: flex;
+    justify-content: center;
+    background-color:rgb(42, 149, 175);
+    text-align: center;
+   
+   
+}
+.headertext h1{
+    font-size: 6vw;
+    color :rgb(149, 233, 198);
+    text-shadow: 2px 2px black;
+    font-family: rancho;
+}
+.logo{
+    vertical-align: middle;
+    width: 15vw;
+    height: 15vw;
+    margin-left: -1vw;
+}
+.moto{
+    padding: 1vw;
+    margin-top: -10%;
+    font-size: 2.8vw;
+    color:rgb(240, 133, 234);
+    text-shadow: 1px 1px black;
+    font-style: italic;
+}
+
+.currentconditions{ 
+    display: inline-block;
+    vertical-align: middle;
+    color:  rgb(0, 195, 255);
+    background-color: rgb(42, 148, 175);
+    border: 0.3vw solid rgba(238, 241, 62, 0.781);
+    font-size: 1vw;
+    border-radius: 15px;
+    font-family: rancho;
+    height: 10vw;
+    margin-top: 2vw;
+    
+    padding: 1vw;
+}
+#icon{
+    width: 7vw;
+   
+}
+
+#condition{
+   
+    padding: 0.5vw;
+    
+}
+h2{
+    color: rgb(45, 223, 193);
+    text-shadow: 2px 1px rgba(224, 28, 28, 0.493);
+    font-size: 4vw;
+    margin-top: -1vw;
+    
+}
+.navigation {
+    margin-top: -3%;
+    background-color:rgb(78, 184, 211);
+    font-size: 2.5vw;
+    font-family: rancho;
+    font-size: 2vw;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+}
+.navigation #nave ul {
+    display: flex;  
+   justify-content: center;
+   
+}
+a:hover{
+    background-color: black;
+    width: 8.7vw;
+    border-radius: 5vw;
+}
+.bar {
+    display: none;
+}
+
+ul li{
+    list-style-type: none;
+}
+li {
+    padding-right: 4vw;
+    
+}
+li > a {
+    color:aquamarine; 
+    display: block;
+    padding: 0.2vw;
+}
+.contact{
+    height: auto;
+    vertical-align: middle;
+    background-color: rgb(78, 184, 211);
+    padding: 1.5em;
+    position: relative;
+    margin-top: 2em;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border:1px solid aquamarine;
+}
+.family{
+    margin-top: 1.5vw;
+    border-radius: 15px;
+}
+.info{
+    font-size: 80%;
+    align-self: center;
+}
+iframe{
+    border-radius: 15px;
+}
+footer {
+    background-color: rgb(42, 149, 175);
+    color: white;
+    font-size: 1.1vw;
+    padding: 0.5em;
+    display:flex;
+    justify-content: center;
+}
+
+.info span{
+    font-weight: bold;
+    color: black;
+    font-size: 2vw;
+}
+.info p{
+    font-size: 1.1vw;
+}
+
+#date {
+    color:white;
+}
+
+fieldset label{
+    display: block;
+    padding: 0.2vw 0 0.6vw 0.2vw;
+    font-size: 25px;
+}
+
+form {
+    color:rgb(78, 184, 211);
+    text-shadow:0.1vw 0.1vw rgb(28, 83, 236);
+}
+fieldset label input, select, textarea{
+    display: block;
+    border-radius: 0.6vw;
+    background-color: rgb(147, 248, 223);
+    padding: .75vw 1.5vw;
+} 
+.contInf, .inf{
+    text-align: left;
+}
+textarea{
+    width: 40vw;
+    height: 15vw;
+}
+
+fieldset input.submit{
+    border:none;
+    background-color: rgb(91, 194, 219);
+    color: white;
+    border-radius: 0.8vw;
+    padding: .75vw 1.5vw;
+    max-width: 10vw;
+    border: 2px solid rgb(35, 108, 126);
+}
+.danger{
+    display:inline-block;
+    padding: 0 10px;
+}
+fieldset legend {
+    font-size: 3vw;
+    font-weight: bold;
+}
+main img {
+    border: 0.2vw solid rgb(35, 108, 126);
+    border-radius: 2vw;
+    text-align: center;
+    width: 50%;
+  
+}
+fieldset label input:required{
+    border-bottom: 0.4vw solid  rgb(233, 25, 25);
+}
+fieldset label input:required:valid{
+    border-bottom:0.4vw solid  rgb(28, 231, 10);
+}
+.ma, #rating, .submit{
+    float: left;
+}
+main{
+    justify-content: left;
+
+}.city {
+    border-radius: 5vw;
+    width: 50%;
+    }
+    #thanks{
+        color: rgb(135, 231, 231);
+        text-shadow: 1px 1px rgb(0, 0, 0);
+        font-size: 4vw;
+    }
+    a{
+        color: rgb(141, 241, 208);
+    }

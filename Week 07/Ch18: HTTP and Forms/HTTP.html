@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Ch18: HTTP and Forms </title>
+    <link rel="stylesheet" type="text/css" href="HTTP.css">
+</head>
+<header>Week7</header>
+<body >
+    <div class="zero">
+        <h1> Ch18: HTTP and Forms</h1>
+
+        <p class="two">
+                HTML Forms are one of the main points of interaction between a user and a web site or application. They allow users to send data to the web site. Most of the time that data is sent to the web server, but the web page can also intercept it to use it on its own.
+The main difference between a HTML form and a regular HTML document is that most of the time, the data collected by the form is sent to a web server.
+ </p>
+        <h3>Exercise</h3>
+        <h4> Content negotiation</h4>
+        <p class="two">One of the things HTTP can do is called content negotiation. The Acceptrequest header is used to tell the server what type of document the client would like to get. Many servers ignore this header, but when a server knows of various ways to encode a resource, it can look at this header and send the one that the client prefers.
+                The URL https://eloquentjavascript.net/author is configured to respond with either plaintext, HTML, or JSON, depending on what the client asks for. These formats are identified by the standardized media types text/plain, text/html, and application/json.
+                Send requests to fetch all three formats of this resource. Use the headersproperty in the options object passed to fetch to set the header named Accept to the desired media type.
+                Finally, try asking for the media type application/rainbows+unicorns and see which status code that produces.
+                </p>
+        <p class="one">
+           <br>
+            // Your code here. <br>
+                       
+        </p> 
+        <h3>The solution is:</h3>
+        <p class="one"> 
+            const url = "https://eloquentjavascript.net/author";<br>
+                const types = ["text/plain",<br>
+                               "text/html",<br>
+                               "application/json",<br>
+                               "application/rainbows+unicorns"];<br>
+                               <br>
+                async function showTypes() {<br>
+                  for (let type of types) {<br>
+                    let resp = await fetch(url, {headers: {accept: type}});<br>
+                    console.log(`${type}: ${await resp.text()}\n`);<br>
+                  }<br>
+                }<br>
+                showTypes();<br>
+                
+            <br>
+            <br>
+          </p>
+    </div> 
+</body>
+</html>

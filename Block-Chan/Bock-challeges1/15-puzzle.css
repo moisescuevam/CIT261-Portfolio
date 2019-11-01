@@ -1,0 +1,70 @@
+body {
+    background-image: url("puzze-back.jpg")
+}
+
+#controls{text-align: center;}
+#puzzle{
+	position: relative;
+	width: 380px;
+	height:380px;
+	margin: 0 auto;
+	margin-top: 75px;
+	border: 12px solid goldenrod;
+	border-radius: 20px;
+}
+#solve{
+  border-top: 25vw;
+}
+#controls button{
+	cursor: pointer;
+	outline: none;	
+	padding: 2vw 6vw;
+	margin: 2vw 0.2vw;
+	border: 0;
+	border-radius: 1vw;
+	background: goldenrod;
+    font-family: "Comic Sans MS", cursive, bold, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 0 rgb(0, 0, 0);
+	color: #fff;
+}
+#controls button:hover
+{
+    background:rgb(38, 199, 38);
+}
+
+#puzzle span{
+	position: absolute;
+	display: block;
+	width: 90px;
+	height: 90px;
+	border-radius: 10px;
+}
+
+#puzzle span.empty
+{
+    background: transparent;
+}
+
+#puzzle span.number.dark
+{
+    background: rgb(233, 233, 16);
+}
+#puzzle span.number{
+	cursor: pointer;
+	font: bold 4.5vw/9vw Arial;
+	text-align: center;
+	text-shadow: -1px -1px 0 rgba(0,0,0, 0.5);
+	color: #fff;
+}
+
+#puzzle.animate span{
+	-webkit-transition: 0.15s left, 0.15s top;
+ 	transition: 0.15s left, 0.15s top;
+}
+::selection {background: transparent;}
+#puzzle span.number.light
+{
+    background: #124be9;
+}
